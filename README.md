@@ -1,6 +1,6 @@
 # Proyect_Fut
 
-Problema a resolver.
+Problema a resolver
 La organización y gestión de eventos deportivos a menudo se realiza manualmente
 o mediante el uso de sistemas informales, lo que puede generar problemas como la
 falta de coordinación, la información inexacta y la dificultad para realizar un
@@ -35,7 +35,7 @@ de eventos deportivos, lo que hace necesaria la implementación de una solución
 que permita abordarlas de manera efectiva.
 
 
-Objetivo del proyecto.
+Objetivo del proyecto
 El objetivo el proyecto es proporcionar una solución de software integral
 para la gestión y organización de eventos deportivos en línea.
 Objetivos específicos
@@ -59,7 +59,7 @@ aplicación.
 • Asegurar la compatibilidad con dispositivos móviles y de escritorio
 
 
-Propuesta de proyecto.
+Propuesta de proyecto
 La solución propuesta es el diseño y desarrollo de una aplicación web y móvil que
 permita la gestión de equipos y partidos de fútbol.
 La aplicación será desarrollada utilizando tecnologías web modernas y estará
