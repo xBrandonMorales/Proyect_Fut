@@ -8,17 +8,17 @@ CREATE TABLE Equipo (
 
 CREATE TABLE Jugador (
   ID_Jugador INT PRIMARY KEY,
-  Nombre VARCHAR(255),
-  Apellido VARCHAR(255),
+  Nombre VARCHAR(20),
+  Apellido VARCHAR(20),
   Edad INT,
-  Posicion VARCHAR(255)
+  Posicion VARCHAR(30)
 );
 
 CREATE TABLE Entrenador (
   ID_Entrenador INT PRIMARY KEY,
-  Nombre VARCHAR(255),
-  Apellido VARCHAR(255),
-  Especialidad VARCHAR(255)
+  Nombre VARCHAR(20),
+  Apellido VARCHAR(20),
+  Especialidad VARCHAR(30)
 );
 
 CREATE TABLE Partido (
@@ -33,15 +33,15 @@ CREATE TABLE Partido (
 
 CREATE TABLE Campo (
   ID_Campo INT PRIMARY KEY,
-  Nombre VARCHAR(255),
-  Direccion VARCHAR(255),
+  Nombre VARCHAR(20),
+  Direccion VARCHAR(40),
   Capacidad INT
 );
 
 CREATE TABLE Arbitro (
   ID_Arbitro INT PRIMARY KEY,
-  Nombre VARCHAR(255),
-  Apellido VARCHAR(255),
+  Nombre VARCHAR(20),
+  Apellido VARCHAR(20),
   Experiencia INT
 );
 
