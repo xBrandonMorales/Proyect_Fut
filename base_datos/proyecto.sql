@@ -1,48 +1,48 @@
 
 CREATE TABLE Equipo (
-  ID_Equipo INT PRIMARY KEY,
-  Nombre VARCHAR(255),
-  Ciudad VARCHAR(255),
-  Año_Fundacion INT
+  ID_Equipo INT PRIMARY KEY   NOT NULL,
+  Nombre VARCHAR(25)   NOT NULL,
+  Ciudad VARCHAR(25)   NOT NULL,
+  Año_Fundacion INT   NOT NULL
 );
 
 CREATE TABLE Jugador (
-  ID_Jugador INT PRIMARY KEY,
-  Nombre VARCHAR(20),
-  Apellido VARCHAR(20),
-  Edad INT,
-  Posicion VARCHAR(30)
+  ID_Jugador INT PRIMARY KEY    NOT NULL,
+  Nombre VARCHAR(20)    NOT NULL,
+  Apellido VARCHAR(20)    NOT NULL,
+  Edad INT    NOT NULL,
+  Posicion VARCHAR(30)    NOT NULL
 );
 
 CREATE TABLE Entrenador (
-  ID_Entrenador INT PRIMARY KEY,
-  Nombre VARCHAR(20),
-  Apellido VARCHAR(20),
-  Especialidad VARCHAR(30)
+  ID_Entrenador INT PRIMARY KEY   NOT NULL,
+  Nombre VARCHAR(20)    NOT NULL,
+  Apellido VARCHAR(20)    NOT NULL,
+  Especialidad VARCHAR(30)    NOT NULL
 );
 
 CREATE TABLE Partido (
-  ID_Partido INT PRIMARY KEY,
-  Fecha DATE,
-  Hora TIME,
-  ID_Equipo_Local INT,
-  ID_Equipo_Visitante INT,
-  FOREIGN KEY (ID_Equipo_Local) REFERENCES Equipo (ID_Equipo),
-  FOREIGN KEY (ID_Equipo_Visitante) REFERENCES Equipo (ID_Equipo)
+  ID_Partido INT PRIMARY KEY    NOT NULL,
+  Fecha DATE    NOT NULL,
+  Hora TIME   NOT NULL,
+  ID_Equipo_Local INT   NOT NULL,
+  ID_Equipo_Visitante INT   NOT NULL,
+  FOREIGN KEY (ID_Equipo_Local) REFERENCES Equipo (ID_Equipo)   NOT NULL,
+  FOREIGN KEY (ID_Equipo_Visitante) REFERENCES Equipo (ID_Equipo)   NOT NULL
 );
 
 CREATE TABLE Campo (
-  ID_Campo INT PRIMARY KEY,
-  Nombre VARCHAR(20),
-  Direccion VARCHAR(40),
-  Capacidad INT
+  ID_Campo INT PRIMARY KEY    NOT NULL,
+  Nombre VARCHAR(20)    NOT NULL,
+  Direccion VARCHAR(40)   NOT NULL,
+  Capacidad INT   NOT NULL
 );
 
 CREATE TABLE Arbitro (
-  ID_Arbitro INT PRIMARY KEY,
-  Nombre VARCHAR(20),
-  Apellido VARCHAR(20),
-  Experiencia INT
+  ID_Arbitro INT PRIMARY KEY    NOT NULL,
+  Nombre VARCHAR(20)    NOT NULL,
+  Apellido VARCHAR(20)    NOT NULL,
+  Experiencia INT   NOT NULL
 );
 
 CREATE TABLE Participa (
