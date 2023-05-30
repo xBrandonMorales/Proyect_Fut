@@ -2,7 +2,7 @@
 | DATO     | Descripción                                |
 |------------|--------------------------------------------|
 | Equipo     | Almacena la información de los equipos      |
-| Jugador    | Almacena la información de los jugadores    |
+| Jugador    | Almacena la información del jugador    |
 | Entrenador | Almacena la información de los entrenadores |
 | Partido    | Almacena la información de los partidos     |
 | Campo      | Almacena la información de los campos       |
@@ -11,3 +11,4 @@
 | Dirige     | Almacena la información de la dirección     |
 | Programa   | Almacena la información de los programas    |
 | Arbitraje  | Almacena la información de los arbitrajes   |
+| Horario    | Almacena la informacion del horario de juego   |
