@@ -1,5 +1,5 @@
 
-| Tabla      | Descripción                                |
+| DATO     | Descripción                                |
 |------------|--------------------------------------------|
 | Equipo     | Almacena la información de los equipos      |
 | Jugador    | Almacena la información de los jugadores    |
