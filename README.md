@@ -1,3 +1,9 @@
+## Integrantes
+
+- Carlos Axel Carrillo Rocha
+- Brandon Castro Morales
+- Jesus Aguilar Olvera
+ 
 # Proyect_Fut
 
 Problema a resolver
@@ -95,6 +101,4 @@ mediante el uso de técnicas de encriptación y autenticación.
 
 
 
-Carlos Axel Carrillo Rocha
-Jesus Aguilar Olvera
-Brandon Castro Morales
+
