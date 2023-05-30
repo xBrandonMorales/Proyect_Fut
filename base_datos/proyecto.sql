@@ -46,32 +46,32 @@ CREATE TABLE Arbitro (
 );
 
 CREATE TABLE Participa (
-  ID_Jugador INT,
-  ID_Equipo INT,
-  FOREIGN KEY (ID_Jugador) REFERENCES Jugador (ID_Jugador),
-  FOREIGN KEY (ID_Equipo) REFERENCES Equipo (ID_Equipo),
-  PRIMARY KEY (ID_Jugador, ID_Equipo)
+  ID_Jugador INT  NOT NULL, 
+  ID_Equipo INT  NOT NULL,
+  FOREIGN KEY (ID_Jugador) REFERENCES Jugador (ID_Jugador)  NOT NULL,
+  FOREIGN KEY (ID_Equipo) REFERENCES Equipo (ID_Equipo)  NOT NULL,
+  PRIMARY KEY (ID_Jugador, ID_Equipo) 
 );
 
 CREATE TABLE Dirige (
-  ID_Entrenador INT,
-  ID_Equipo INT,
+  ID_Entrenador INT  NOT NULL,
+  ID_Equipo INT  NOT NULL,
   FOREIGN KEY (ID_Entrenador) REFERENCES Entrenador (ID_Entrenador),
   FOREIGN KEY (ID_Equipo) REFERENCES Equipo (ID_Equipo),
   PRIMARY KEY (ID_Entrenador, ID_Equipo)
 );
 
 CREATE TABLE Programa (
-  ID_Partido INT,
-  ID_Campo INT,
+  ID_Partido INT  NOT NULL,
+  ID_Campo INT  NOT NULL,
   FOREIGN KEY (ID_Partido) REFERENCES Partido (ID_Partido),
   FOREIGN KEY (ID_Campo) REFERENCES Campo (ID_Campo),
   PRIMARY KEY (ID_Partido, ID_Campo)
 );
 
 CREATE TABLE Arbitraje (
-  ID_Partido INT,
-  ID_Arbitro INT,
+  ID_Partido INT  NOT NULL,
+  ID_Arbitro INT  NOT NULL,
   FOREIGN KEY (ID_Partido) REFERENCES Partido (ID_Partido),
   FOREIGN KEY (ID_Arbitro) REFERENCES Arbitro (ID_Arbitro),
   PRIMARY KEY (ID_Partido, ID_Arbitro)
