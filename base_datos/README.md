@@ -1,14 +1,10 @@
 
-| DATO     | Descripción                                |
-|------------|--------------------------------------------|
-| Equipo     | Almacena la información de los equipos      |
-| Jugador    | Almacena la información del jugador    |
-| Entrenador | Almacena la información de los entrenadores |
-| Partido    | Almacena la información de los partidos     |
-| Campo      | Almacena la información de los campos       |
-| Arbitro    | Almacena la información de los árbitros      |
-| Participa  | Almacena la información de los participantes|
-| Dirige     | Almacena la información de la dirección     |
-| Programa   | Almacena la información de los programas    |
-| Arbitraje  | Almacena la información de los arbitrajes   |
-| Horario    | Almacena la informacion del horario de juego   |
+
+
+| Equipo|
+|---------|----------|-------|-----------|-----------|
+|campo    |tipo|descripcion|cardinalidad|
+|ID_Equipo|	INT|Identificador del equipo|
+|Nombre   |	VARCHAR(25)|	Nombre del equipo|
+|Ciudad   |	VARCHAR(25)|	Ciudad del equipo|
+|Año_Fundacion|	INT|	Año de fundación del equipo|
