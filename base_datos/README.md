@@ -1,6 +1,7 @@
-| Equipo        |                |               |                                  
-|---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                     
+| Equipo                                         | 
+|------------------------------------------------|
+|campo          | tipo           |descripcion    |
+|---------------|----------------|---------------|                   
 | ID_Equipo     | INT            | Identificador del equipo |                     
 | Nombre        | VARCHAR(25)    | Nombre del equipo |                    
 | Ciudad        | VARCHAR(25)    | Ciudad del equipo |                     
