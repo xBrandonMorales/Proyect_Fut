@@ -9,9 +9,10 @@ Equipo
 | Año_Fundacion | INT            | Año de fundación del equipo |      
 
 
-| Jugador       |                |               |             
+Jugador
+
+| campo         | tipo           | descripcion   | 
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |    
 | ID_Jugador    | INT            | Identificador del jugador |                     
 | Nombre        | VARCHAR(20)    | Nombre del jugador |                     
 | Apellido      | VARCHAR(20)    | Apellido del jugador |                     
@@ -20,17 +21,20 @@ Equipo
 
 
 
-| Entrenador    |                |               |        
-|---------------|----------------|---------------|
+Entrenador
+
 | campo         | tipo           | descripcion   | 
+|---------------|----------------|---------------|
 | ID_Entrenador | INT            | Identificador del entrenador |                     
 | Nombre        | VARCHAR(20)    | Nombre del entrenador |                     
 | Apellido      | VARCHAR(20)    | Apellido del entrenador |                     
-| Especialidad  | VARCHAR(30)    | Especialidad del entrenador |                     
+| Especialidad  | VARCHAR(30)    | Especialidad del entrenador |
 
-| Partido       |                |               |                              
+
+Partido 
+
+| campo         | tipo           | descripcion   |
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                    
 | ID_Partido    | INT            | Identificador del partido |                     
 | Fecha         | DATE           | Fecha en que se juega el partido |                     
 | Hora          | TIME           | Hora en que se juega el partido |                     
@@ -39,9 +43,10 @@ Equipo
 
 
 
-| Campo         |                |               |                                 
+Campo
+
+| campo         | tipo           | descripcion   | 
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                     
 | ID_Campo      | INT            | Identificador del campo |                     
 | Nombre        | VARCHAR(20)    | Nombre del campo |                     
 | Direccion     | VARCHAR(40)    | Dirección del campo |                    
@@ -49,32 +54,36 @@ Equipo
 
 
 
-| Arbitro       |                |               |                                 
+Arbitro
+
+| campo         | tipo           | descripcion   | 
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                      
 | ID_Arbitro    | INT            | Identificador del árbitro |                     
 | Nombre        | VARCHAR(20)    | Nombre del árbitro |                     
 | Apellido      | VARCHAR(20)    | Apellido del árbitro |                     
 | Experiencia   | INT            | Experiencia del árbitro |                     
 
 
-| Participa     |                |               |                                 
+Participa
+
+| campo         | tipo           | descripcion   |
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                     
 | ID_Partido    | INT            | Identificador del partido |                     
 | ID_Equipo     | INT            | Identificador del equipo |                     
 | ID_Jugador    | INT            | Identificador del jugador |                     
 
 
 
-| Dirige        |                |               |                                
+Dirige
+
+| campo         | tipo           | descripcion   | 
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                    
 | ID_Entrenador | INT            | Identificador del entrenador |                     
 | ID_Equipo     | INT            | Identificador del equipo |                     
 
-| Arbitraje     |                |               |                                
+Arbitraje
+
+| campo         | tipo           | descripcion   |  
 |---------------|----------------|---------------|
-| campo         | tipo           | descripcion   |                     
 | ID_Partido    | INT            | Identificador del partido |                    
 | ID_Arbitro    | INT            | Identificador del árbitro |                     
