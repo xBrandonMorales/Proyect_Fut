@@ -1,5 +1,6 @@
-| Equipo                                         | 
-|------------------------------------------------|
+
+Equipo
+
 |campo          | tipo           |descripcion    |
 |---------------|----------------|---------------|                   
 | ID_Equipo     | INT            | Identificador del equipo |                     
