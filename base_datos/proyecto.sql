@@ -1,78 +1,79 @@
-
-CREATE TABLE Equipo (
-  ID_Equipo INT PRIMARY KEY   NOT NULL,
-  Nombre VARCHAR(25)   NOT NULL,
-  Ciudad VARCHAR(25)   NOT NULL,
-  Año_Fundacion INT   NOT NULL
+CREATE TABLE equipo (
+  ID_Equipo INTEGER PRIMARY KEY,
+  Nombre TEXT,
+  Anio_Fundacion TEXT,
+  Ciudad TEXT
 );
 
-CREATE TABLE Jugador (
-  ID_Jugador INT PRIMARY KEY    NOT NULL,
-  Nombre VARCHAR(20)    NOT NULL,
-  Apellido VARCHAR(20)    NOT NULL,
-  Edad INT    NOT NULL,
-  Posicion VARCHAR(30)    NOT NULL
+CREATE TABLE jugador (
+  ID_Jugador INTEGER PRIMARY KEY,
+  CURP TEXT,
+  Nombre TEXT,
+  Apellido1 TEXT,
+  Apellido2 TEXT,
+  Correo TEXT,
+  Telefono TEXT,
+  ID_Equipo INTEGER,
+  FOREIGN KEY (ID_Equipo) REFERENCES equipo(ID_Equipo)
 );
 
-CREATE TABLE Entrenador (
-  ID_Entrenador INT PRIMARY KEY   NOT NULL,
-  Nombre VARCHAR(20)    NOT NULL,
-  Apellido VARCHAR(20)    NOT NULL,
-  Especialidad VARCHAR(30)    NOT NULL
+CREATE TABLE arbitro (
+  ID_Arbitro INTEGER PRIMARY KEY,
+  Nombre TEXT,
+  Apellido1 TEXT,
+  Apellido2 TEXT,
+  Telefono TEXT,
+  Aptitud TEXT
 );
 
-CREATE TABLE Partido (
-  ID_Partido INT PRIMARY KEY    NOT NULL,
-  Fecha DATE    NOT NULL,
-  Hora TIME   NOT NULL,
-  ID_Equipo_Local INT   NOT NULL,
-  ID_Equipo_Visitante INT   NOT NULL,
-  FOREIGN KEY (ID_Equipo_Local) REFERENCES Equipo (ID_Equipo)   NOT NULL,
-  FOREIGN KEY (ID_Equipo_Visitante) REFERENCES Equipo (ID_Equipo)   NOT NULL
+CREATE TABLE estadisticas_arbitro (
+  ID_Arbitro INTEGER,
+  Faltas INTEGER,
+  Tarjetas_Amarillas INTEGER,
+  Tarjetas_Rojas INTEGER,
+  PRIMARY KEY (ID_Arbitro),
+  FOREIGN KEY (ID_Arbitro) REFERENCES arbitro(ID_Arbitro)
 );
 
-CREATE TABLE Campo (
-  ID_Campo INT PRIMARY KEY    NOT NULL,
-  Nombre VARCHAR(20)    NOT NULL,
-  Direccion VARCHAR(40)   NOT NULL,
-  Capacidad INT   NOT NULL
+CREATE TABLE campo (
+  ID_Campo INTEGER PRIMARY KEY,
+  Calle TEXT,
+  Numero TEXT,
+  Ciudad TEXT,
+  Primer_Apellido_Encargado TEXT,
+  Segundo_Apellido_Encargado TEXT,
+  Tipo_Cancha TEXT,
+  Tipo_Pasto TEXT,
+  Condiciones_Cancha TEXT
 );
 
-CREATE TABLE Arbitro (
-  ID_Arbitro INT PRIMARY KEY    NOT NULL,
-  Nombre VARCHAR(20)    NOT NULL,
-  Apellido VARCHAR(20)    NOT NULL,
-  Experiencia INT   NOT NULL
+CREATE TABLE partido (
+  ID_Partido INTEGER PRIMARY KEY,
+  Fecha TEXT,
+  Hora TEXT, 
+  ID_Arbitro INTEGER, 
+  ID_Campo INTEGER, 
+  Tipo_Cancha TEXT, 
+   FOREIGN KEY (ID_Arbitro) REFERENCES arbitro(ID_Arbitro),
+   FOREIGN KEY (ID_Campo) REFERENCES campo(ID_Campo)
 );
 
-CREATE TABLE Participa (
-  ID_Jugador INT  NOT NULL, 
-  ID_Equipo INT  NOT NULL,
-  FOREIGN KEY (ID_Jugador) REFERENCES Jugador (ID_Jugador)  NOT NULL,
-  FOREIGN KEY (ID_Equipo) REFERENCES Equipo (ID_Equipo)  NOT NULL,
-  PRIMARY KEY (ID_Jugador, ID_Equipo) 
+CREATE TABLE participantes (
+  ID_Partido INTEGER,
+  ID_Local INTEGER,
+  ID_Visitante INTEGER,
+  PRIMARY KEY (ID_Partido),
+  FOREIGN KEY (ID_Partido) REFERENCES partido(ID_Partido),
+  FOREIGN KEY (ID_Local) REFERENCES equipo(ID_Equipo),
+  FOREIGN KEY (ID_Visitante) REFERENCES equipo(ID_Equipo)
 );
 
-CREATE TABLE Dirige (
-  ID_Entrenador INT  NOT NULL,
-  ID_Equipo INT  NOT NULL,
-  FOREIGN KEY (ID_Entrenador) REFERENCES Entrenador (ID_Entrenador),
-  FOREIGN KEY (ID_Equipo) REFERENCES Equipo (ID_Equipo),
-  PRIMARY KEY (ID_Entrenador, ID_Equipo)
-);
-
-CREATE TABLE Programa (
-  ID_Partido INT  NOT NULL,
-  ID_Campo INT  NOT NULL,
-  FOREIGN KEY (ID_Partido) REFERENCES Partido (ID_Partido),
-  FOREIGN KEY (ID_Campo) REFERENCES Campo (ID_Campo),
-  PRIMARY KEY (ID_Partido, ID_Campo)
-);
-
-CREATE TABLE Arbitraje (
-  ID_Partido INT  NOT NULL,
-  ID_Arbitro INT  NOT NULL,
-  FOREIGN KEY (ID_Partido) REFERENCES Partido (ID_Partido),
-  FOREIGN KEY (ID_Arbitro) REFERENCES Arbitro (ID_Arbitro),
-  PRIMARY KEY (ID_Partido, ID_Arbitro)
+CREATE TABLE estadisticas_jugador (
+  ID_Jugador INTEGER,
+  Goles INTEGER,
+  Asistencias INTEGER,
+  Tarjetas_Amarillas INTEGER,
+  Tarjetas_Rojas INTEGER,
+  PRIMARY KEY (ID_Jugador),
+  FOREIGN KEY (ID_Jugador) REFERENCES jugador(ID_Jugador)
 );
