@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Recupera tu contraseña</title>
+  <link rel="stylesheet" href="recuper_contraseña.css">
+  <meta charset="UTF-8">
+  <script>
+    // Función para validar el formulario
+    function validarFormulario(event) {
+      event.preventDefault(); // Evitar el envío del formulario por defecto
+
+      var emailInput = document.querySelector('input[type="email"]');
+      var email = emailInput.value.trim(); // Eliminar espacios en blanco al inicio y al final del correo
+
+      if (email === '') {
+        alert('Por favor, ingresa tu correo electrónico.');
+        emailInput.focus();
+        return false;
+      }
+
+      if (!validateEmail(email)) {
+        alert('El correo electrónico ingresado no es válido. Por favor, corríjalo.');
+        emailInput.focus();
+        return false;
+      }
+
+      // Simulación de proceso de recuperación de contraseña
+
+      alert('Se ha enviado un enlace de recuperación de contraseña al correo electrónico proporcionado.');
+      // Aquí puedes agregar el código adicional para redirigir a otra página o realizar alguna acción específica
+
+      return true;
+    }
+
+    // Función para validar el formato del correo electrónico utilizando una expresión regular
+    function validateEmail(email) {
+      var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="h1">Recupera tu contraseña</h1>
+    <h2>¿Olvidaste tu contraseña?</h2>
+    <form onsubmit="return validarFormulario(event)">
+        <br>
+      <input type="email" placeholder="Correo electrónico" required>
+      <br><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+    <hr width="590px" size="3px" color="white" ><h2><a href="Inicio_sesion.html">Volver</a></h2>
+  </div>
+</body>
+</html>

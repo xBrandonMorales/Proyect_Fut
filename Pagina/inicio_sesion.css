@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  body {
+    background-image: linear-gradient(to right, #08070f, #4b28e7);
+    background-repeat: no-repeat;
+  }
+  
+  h1 {
+    font-size: 70px;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  label {
+    display: block;
+    color: white;
+    margin-bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    margin-top: 7px;
+    color: white;
+    height: 40px; width: 300px; 
+    border: 1px solid white; 
+    background-color: #000000;
+  }
+  
+  input[type="submit"] {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    color: #000000;
+    border: none;
+    padding: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #eaeaea;
+  }
+  h3 {
+      color: wheat;
+      font-size: 15px;
+  }
+  a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+  }
+  h2 {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+  }

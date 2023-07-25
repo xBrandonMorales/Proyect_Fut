@@ -1,0 +1,57 @@
+/* Estilos para el fondo y centrado del contenido */
+html, body {
+height: 100%;
+background: linear-gradient(to right, #08070f, #4b28e7);
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h1 {
+margin-top: 10px;
+font-size: 55px;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el contenido principal */
+.container {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilos para el campo de correo electrónico y el botón */
+input[type="email"],
+button {
+  background-color: black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Estilos para el enlace de regresar */
+.back-link {
+  color: white;
+  text-decoration: underline;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+  }
+
+a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+  }

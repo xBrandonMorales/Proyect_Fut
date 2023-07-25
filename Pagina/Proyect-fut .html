@@ -1,0 +1,215 @@
+<html>
+<html>
+<head>
+  <title>Calendario de Proyect-Fut</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #08070f, #4b28e7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+
+       /* Estilos para el fondo y centrado del contenido */
+
+    html, body {
+      height: 100%;
+      background: linear-gradient(to right, #08070f, #4b28e7);
+    }
+
+    .calendar {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 600px;
+      justify-content: center; /* Centra el contenido horizontalmente */
+    }
+
+    .day {
+      flex-basis: 14.28%;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .day:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    .selected-day {
+      background-color: #4b28e7;
+      color: #fff;
+    }
+
+    .event-form {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .event-form.show {
+      display: block;
+    }
+
+    .event-form h2 {
+      margin: 0 0 10px;
+    }
+
+    .event-form input[type="text"],
+    .event-form input[type="datetime-local"],
+    .event-form button {
+      margin-top: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4b28e7;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .event-form input[type="text"]:focus,
+    .event-form input[type="datetime-local"]:focus {
+      outline: none;
+    }
+
+    .event-form button:hover {
+      background-color: #3a1b9a;
+    }
+
+    .event-list {
+      margin-top: 20px;
+    }
+
+    .event-list-item {
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #4b28e7;
+      color: #fff;
+    }
+  </style>
+  <script>
+    // Agrega interactividad para seleccionar un día y mostrar el formulario de eventos
+    document.addEventListener('DOMContentLoaded', function() {
+      var days = document.querySelectorAll('.day');
+      var eventForm = document.querySelector('.event-form');
+      var eventList = document.querySelector('.event-list');
+
+      days.forEach(function(day) {
+        day.addEventListener('click', function() {
+          var selectedDay = document.querySelector('.selected-day');
+          if (selectedDay) {
+            selectedDay.classList.remove('selected-day');
+          }
+          this.classList.add('selected-day');
+          showEventForm();
+        });
+      });
+
+      eventForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var eventName = document.querySelector('#event-name').value;
+        var eventDateTime = document.querySelector('#event-datetime').value;
+        addEventToList(eventName, eventDateTime);
+        resetEventForm();
+      });
+
+      function showEventForm() {
+        var selectedDay = document.querySelector('.selected-day');
+        if (selectedDay) {
+          eventForm.classList.add('show');
+        } else {
+          eventForm.classList.remove('show');
+        }
+      }
+
+      function addEventToList(name, dateTime) {
+        var listItem = document.createElement('div');
+        listItem.classList.add('event-list-item');
+        listItem.textContent = name + ' - ' + dateTime;
+        eventList.appendChild(listItem);
+      }
+
+      function resetEventForm() {
+        document.querySelector('#event-name').value = '';
+        document.querySelector('#event-datetime').value = '';
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Calendario de Proyect-Fut</h1>
+
+  <div class="calendar">
+    <div class="day">01</div>
+    <div class="day">02</div>
+    <div class="day">03</div>
+    <div class="day">04</div>
+    <div class="day">05</div>
+    <div class="day">06</div>
+    <div class="day">07</div>
+    <div class="day">08</div>
+    <div class="day">09</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">17</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+    <div class="day">30</div>
+  </div>
+
+  <div class="event-form">
+    <h2>Agregar Evento</h2>
+    <form id="event-form">
+      <input type="text" id="event-name" placeholder="Nombre del evento" required>
+      <input type="datetime-local" id="event-datetime" placeholder="Fecha y hora" required>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+
+  <div class="event-list">
+    <h2>Eventos Agregados</h2>
+    <div class="event-list-item">Evento 1 - 2023-06-08T12:00</div>
+    <div class="event-list-item">Evento 2 - 2023-06-10T15:30</div>
+    <div class="event-list-item">Evento 3 - 2023-06-12T09:45</div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
