@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estadísticas de Jugadores</title>
+  <style>
+    /* Estilos de la tabla y los botones */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid rgb(255, 255, 255);
+      padding: 8px;
+      text-align: left;
+      color: white;
+    }
+
+    .update-button {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Estilos del fondo */
+    body {
+      background-image: linear-gradient(to right, #000000, #4b28e7);
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100vh;
+      margin: 0;
+    }
+
+    /* Estilos adicionales proporcionados */
+    h1 {
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 0;
+    }
+
+    input[type="number"] {
+      width: 80px;
+    }
+
+    .add-player-form {
+      display: none;
+      background-color: #444;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+
+    .add-player-form input[type="text"],
+    .add-player-form input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid white;
+      background-color: rgb(255, 255, 255);
+      color: black;
+    }
+
+    .add-player-form button {
+      background-color: white;
+      color: #000;
+      border: none;
+      padding: 8px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .add-player-form button:hover {
+      background-color: #000;
+      color: white;
+    }
+
+    .add-player-button {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Estadísticas de Jugadores</h1>
+
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Puntos</th>
+      <th>Asistencias</th>
+      <th>Rebotes</th>
+      <th>Goles</th>
+      <th>Tarjetas Amarillas</th>
+      <th>Tarjetas Rojas</th>
+    </tr>
+    <tr>
+      <td>Jugador 1</td>
+      <td class="stats-cell"><span id="player1-points">100</span><button class="update-button" onclick="updatePoints('player1')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player1-assists">50</span><button class="update-button" onclick="updateAssists('player1')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player1-rebounds">30</span><button class="update-button" onclick="updateRebounds('player1')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player1-goals">10</span><button class="update-button" onclick="updateGoals('player1')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player1-yellow-cards">2</span><button class="update-button" onclick="updateYellowCards('player1')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player1-red-cards">0</span><button class="update-button" onclick="updateRedCards('player1')">Actualizar</button></td>
+    </tr>
+    <tr>
+      <td>Jugador 2</td>
+      <td class="stats-cell"><span id="player2-points">80</span><button class="update-button" onclick="updatePoints('player2')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player2-assists">40</span><button class="update-button" onclick="updateAssists('player2')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player2-rebounds">20</span><button class="update-button" onclick="updateRebounds('player2')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player2-goals">5</span><button class="update-button" onclick="updateGoals('player2')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player2-yellow-cards">1</span><button class="update-button" onclick="updateYellowCards('player2')">Actualizar</button></td>
+      <td class="stats-cell"><span id="player2-red-cards">0</span><button class="update-button" onclick="updateRedCards('player2')">Actualizar</button></td>
+    </tr>
+    <!-- Agrega más filas para más jugadores -->
+  </table>
+
+  <button class="add-player-button" onclick="toggleAddPlayerForm()">Añadir Jugador</button>
+
+  <div class="add-player-form" id="addPlayerForm">
+    <input type="text" id="playerName" placeholder="Nombre del Jugador">
+    <input type="number" id="playerPoints" placeholder="Puntos">
+    <input type="number" id="playerAssists" placeholder="Asistencias">
+    <input type="number" id="playerRebounds" placeholder="Rebotes">
+    <input type="number" id="playerGoals" placeholder="Goles">
+    <input type="number" id="playerYellowCards" placeholder="Tarjetas Amarillas">
+    <input type="number" id="playerRedCards" placeholder="Tarjetas Rojas">
+    <button onclick="addPlayer()">Guardar</button>
+  </div>
+
+  <script>
+    function updatePoints(playerId) {
+      var pointsElement = document.getElementById(playerId + '-points');
+      var newPoints = parseInt(prompt('Nuevo número de puntos para ' + playerId));
+
+      if (!isNaN(newPoints)) {
+        pointsElement.textContent = newPoints;
+      } else {
+        alert('Ingresa un número válido para los puntos.');
+      }
+    }
+
+    function updateAssists(playerId) {
+      var assistsElement = document.getElementById(playerId + '-assists');
+      var newAssists = parseInt(prompt('Nuevo número de asistencias para ' + playerId));
+
+      if (!isNaN(newAssists)) {
+        assistsElement.textContent = newAssists;
+      } else {
+        alert('Ingresa un número válido para las asistencias.');
+      }
+    }
+
+    function updateRebounds(playerId) {
+      var reboundsElement = document.getElementById(playerId + '-rebounds');
+      var newRebounds = parseInt(prompt('Nuevo número de rebotes para ' + playerId));
+
+      if (!isNaN(newRebounds)) {
+        reboundsElement.textContent = newRebounds;
+      } else {
+        alert('Ingresa un número válido para los rebotes.');
+      }
+    }
+
+    function updateGoals(playerId) {
+      var goalsElement = document.getElementById(playerId + '-goals');
+      var newGoals = parseInt(prompt('Nuevo número de goles para ' + playerId));
+
+      if (!isNaN(newGoals)) {
+        goalsElement.textContent = newGoals;
+      } else {
+        alert('Ingresa un número válido para los goles.');
+      }
+    }
+
+    function updateYellowCards(playerId) {
+      var yellowCardsElement = document.getElementById(playerId + '-yellow-cards');
+      var newYellowCards = parseInt(prompt('Nuevo número de tarjetas amarillas para ' + playerId));
+
+      if (!isNaN(newYellowCards)) {
+        yellowCardsElement.textContent = newYellowCards;
+      } else {
+        alert('Ingresa un número válido para las tarjetas amarillas.');
+      }
+    }
+
+    function updateRedCards(playerId) {
+      var redCardsElement = document.getElementById(playerId + '-red-cards');
+      var newRedCards = parseInt(prompt('Nuevo número de tarjetas rojas para ' + playerId));
+
+      if (!isNaN(newRedCards)) {
+        redCardsElement.textContent = newRedCards;
+      } else {
+        alert('Ingresa un número válido para las tarjetas rojas.');
+      }
+    }
+
+    function toggleAddPlayerForm() {
+      var addPlayerForm = document.getElementById('addPlayerForm');
+      if (addPlayerForm.style.display === "none") {
+        addPlayerForm.style.display = "block";
+      } else {
+        addPlayerForm.style.display = "none";
+      }
+    }
+
+    function addPlayer() {
+      var playerName = document.getElementById("playerName").value;
+      var playerPoints = document.getElementById("playerPoints").value;
+      var playerAssists = document.getElementById("playerAssists").value;
+      var playerRebounds = document.getElementById("playerRebounds").value;
+      var playerGoals = document.getElementById("playerGoals").value;
+      var playerYellowCards = document.getElementById("playerYellowCards").value;
+      var playerRedCards = document.getElementById("playerRedCards").value;
+
+      var table = document.querySelector('table');
+      var newRow = table.insertRow(-1);
+      var cell0 = newRow.insertCell(0);
+      var cell1 = newRow.insertCell(1);
+      var cell2 = newRow.insertCell(2);
+      var cell3 = newRow.insertCell(3);
+      var cell4 = newRow.insertCell(4);
+      var cell5 = newRow.insertCell(5);
+      var cell6 = newRow.insertCell(6);
+
+      cell0.innerHTML = playerName;
+      cell1.innerHTML = '<span id="' + playerName + '-points">' + playerPoints + '</span><button class="update-button" onclick="updatePoints(\'' + playerName + '\')">Actualizar</button>';
+      cell2.innerHTML = '<span id="' + playerName + '-assists">' + playerAssists + '</span><button class="update-button" onclick="updateAssists(\'' + playerName + '\')">Actualizar</button>';
+      cell3.innerHTML = '<span id="' + playerName + '-rebounds">' + playerRebounds + '</span><button class="update-button" onclick="updateRebounds(\'' + playerName + '\')">Actualizar</button>';
+      cell4.innerHTML = '<span id="' + playerName + '-goals">' + playerGoals + '</span><button class="update-button" onclick="updateGoals(\'' + playerName + '\')">Actualizar</button>';
+      cell5.innerHTML = '<span id="' + playerName + '-yellow-cards">' + playerYellowCards + '</span><button class="update-button" onclick="updateYellowCards(\'' + playerName + '\')">Actualizar</button>';
+      cell6.innerHTML = '<span id="' + playerName + '-red-cards">' + playerRedCards + '</span><button class="update-button" onclick="updateRedCards(\'' + playerName + '\')">Actualizar</button>';
+
+      toggleAddPlayerForm();
+      // Limpiar los campos del formulario
+      document.getElementById("playerName").value = "";
+      document.getElementById("playerPoints").value = "";
+      document.getElementById("playerAssists").value = "";
+      document.getElementById("playerRebounds").value = "";
+      document.getElementById("playerGoals").value = "";
+      document.getElementById("playerYellowCards").value = "";
+      document.getElementById("playerRedCards").value = "";
+    }
+  </script>
+</body>
+</html>
