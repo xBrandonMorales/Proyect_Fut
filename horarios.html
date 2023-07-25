@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendario de Proyect-Fut</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #08070f, #4b28e7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 66.5vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    p {
+    color: #fff;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 100px;
+  }
+
+  nav a {
+    color: #fff;
+    justify-content: space-around;
+    padding: 150px;
+    width: 80%;
+  }
+
+  .animated-button {
+    padding: 8px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    margin-right: 200px;
+    margin-left: 170px;
+  }
+  .animated-button:hover {
+    background-color: #0056b3;
+  }
+  .animated-button:active {
+    transform: scale(0.95);
+  }
+
+
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 250px;
+    }
+    h3 {
+        color: #08070f;
+    }
+
+    .event-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .event-form h2 {
+      margin: 0 0 10px;
+    }
+
+    .event-form input[type="text"],
+    .event-form input[type="datetime-local"],
+    .event-form button {
+      margin-top: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4b28e7;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .event-form input[type="text"]:focus,
+    .event-form input[type="datetime-local"]:focus {
+      outline: none;
+    }
+
+    .event-form button:hover {
+      background-color: #3a1b9a;
+    }
+
+    .event-list {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .event-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .event-list th,
+    .event-list td {
+      padding: 10px;
+      border: 1px solid #fff;
+      text-align: center;
+    }
+
+    .event-list th {
+      background-color: #4b28e7;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .event-list td {
+      background-color: #7c61f7;
+      color: #fff;
+    }
+
+    .event-list .delete-button {
+      background-color: #e74c3c;
+      transition: background-color 0.3s ease;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .event-list .delete-button:hover {
+      background-color: #c0392b;
+    }
+
+    .confirm-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s;
+    }
+
+    .confirm-modal.show {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.3s;
+    }
+
+    .confirm-modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .confirm-modal-content h3 {
+      margin: 0 0 10px;
+    }
+
+    .confirm-modal-content button {
+      margin: 0 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4b28e7;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .confirm-modal-content button:hover {
+      background-color: #3a1b9a;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var eventForm = document.querySelector('.event-form');
+      var eventList = document.querySelector('.event-list');
+      var eventTable = eventList.querySelector('table');
+      var eventTbody = eventTable.querySelector('tbody');
+      var confirmModal = document.querySelector('.confirm-modal');
+      var confirmModalAcceptButton = document.querySelector('#confirm-modal-accept-button');
+      var confirmModalCancelButton = document.querySelector('#confirm-modal-cancel-button');
+      var selectedRowIndex = null;
+
+      eventForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var eventName = document.querySelector('#event-name').value;
+        var eventDateTime = document.querySelector('#event-datetime').value;
+        addEventToList(eventName, eventDateTime);
+        resetEventForm();
+      });
+
+      eventTbody.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-button')) {
+          var row = event.target.parentNode.parentNode;
+          selectedRowIndex = Array.prototype.indexOf.call(eventTbody.children, row);
+          showConfirmModal();
+        }
+      });
+
+      confirmModalAcceptButton.addEventListener('click', function() {
+        deleteEvent(selectedRowIndex);
+        hideConfirmModal();
+        selectedRowIndex = null;
+      });
+
+      confirmModalCancelButton.addEventListener('click', function() {
+        hideConfirmModal();
+        selectedRowIndex = null;
+      });
+
+      function addEventToList(eventName, eventDateTime) {
+        var newRow = document.createElement('tr');
+        var nameCell = document.createElement('td');
+        var dateTimeCell = document.createElement('td');
+        var deleteCell = document.createElement('td');
+        var deleteButton = document.createElement('button');
+
+        nameCell.textContent = eventName;
+        dateTimeCell.textContent = eventDateTime;
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.classList.add('delete-button');
+
+        deleteCell.appendChild(deleteButton);
+
+        newRow.appendChild(nameCell);
+        newRow.appendChild(dateTimeCell);
+        newRow.appendChild(deleteCell);
+
+        eventTbody.appendChild(newRow);
+      }
+
+      function deleteEvent(index) {
+        eventTbody.removeChild(eventTbody.children[index]);
+      }
+
+      function resetEventForm() {
+        document.querySelector('#event-name').value = '';
+        document.querySelector('#event-datetime').value = '';
+      }
+
+      function showConfirmModal() {
+        confirmModal.classList.add('show');
+      }
+
+      function hideConfirmModal() {
+        confirmModal.classList.remove('show');
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Proyect Fut</p>
+  <nav>
+      <a href="inicio.html" class="animated-button">Inicio</a>
+      <a href="horarios.html" class="animated-button">Horarios</a>
+      <a href="canchas.html" class="animated-button">Canchas</a>
+      <a href="estadisticas.html" class="animated-button">Estadisticas</a>
+  </nav>
+  <br>
+  <hr width="1915px" size="2px" color="white" >
+
+  <h1>Proyect-Fut</h1>
+
+  <div class="event-form">
+    <h2>Insertar Evento</h2>
+    <form id="event-form">
+      <input type="text" id="event-name" placeholder="Nombre del evento" required>
+      <input type="datetime-local" id="event-datetime" placeholder="Fecha y hora" required>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+
+  <div class="event-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre del evento</th>
+          <th>Fecha y hora</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="confirm-modal" id="confirm-modal">
+    <div class="confirm-modal-content">
+      <h3>¿Estás seguro de que deseas eliminar este evento?</h3>
+      <button id="confirm-modal-accept-button">Aceptar</button>
+      <button id="confirm-modal-cancel-button">Cancelar</button>
+    </div>
+  </div>
+</body>
+</html>

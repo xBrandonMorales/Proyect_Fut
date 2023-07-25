@@ -1,0 +1,56 @@
+
+<html>
+<head>
+  <title>Proyect Fut</title>
+  <link rel="stylesheet" href="creacuenta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-*********" crossorigin="anonymous" />
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordIcon = document.getElementById("password-icon");
+      
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordIcon.classList.remove("fa-eye");
+        passwordIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        passwordIcon.classList.remove("fa-eye-slash");
+        passwordIcon.classList.add("fa-eye");
+      }
+    }
+  </script>
+</head>
+
+<body class="body">
+<center>
+    <br>
+    <h1 class="h1">CREA TU NUEVA CUENTA</h1>
+  <form>
+    <label class="nombre" for="nombre">Nombre:</label>
+    <br>
+    <input class="campo_nombre" type="text" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" required>
+    <br><br>
+    <label class="contraseña" for="password">Contraseña:</label>
+    <br>
+    <input class="campo_contraseña" type="password" id="password" name="password" placeholder="Contraseña" required>
+    <br>
+    <i id="password-icon" class="fas fa-eye password-icon" onclick="togglePasswordVisibility()"></i>
+    <br>
+    <label class="correo" for="correo">Correo electronico:</label>
+    <br>
+    <input class="campo_correo" type="email" id="correo" name="correo" placeholder="correo@example.com" required>
+    <br><br>
+    <label class="dia_cumpleaños" for="dia_cumpleaños">Fecha de Nacimiento</label>
+    <br>
+    <input class="campo_cumpleaños" type="date" name="dia_cumpleaños" id="dia_cumpleaños" required>
+    <br><br>
+    <input class="campo_ingresar" type="submit" value="REGISTRAR">
+    <br>
+  </form>
+  <br><br><br><br><br>
+  <hr width="590px" size="3px" color="white" ><h4>¿Ya estas registrado? <a href="Inicio_sesion.html"> Inicia Sesion</a></h4>
+</center>
+</body>
+</html>

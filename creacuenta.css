@@ -1,0 +1,103 @@
+body {
+    background-image: linear-gradient(to right, #000000, #4B28E7);
+}
+
+h1 {
+    margin-top: 160px;
+    font-size: 55px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h4 {
+    color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: #ffffff;
+}
+
+.nombre {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 195px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+.campo_nombre {
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    height: 4%; width: 14%; 
+    border: 1px solid white; 
+    background-color: #000000;
+}
+
+.contraseña{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+.campo_contraseña {
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    height: 4%; width: 14%; 
+    border: 1px solid white; 
+    background-color: #000000;
+}
+.password-icon {
+    color: #ffffff;
+    position: absolute;
+    right: 836px;
+    top: 42%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.correo {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+.campo_correo {
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    height: 4%; width: 14%; 
+    border: 1px solid white; 
+    background-color: #000000;
+}
+
+.dia_cumpleaños {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 98px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+.campo_cumpleaños {
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    height: 4%; width: 14%; 
+    border: 1px solid white; 
+    background-color: #000000;  
+}
+
+.campo_ingresar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 4%; width: 7%; 
+    border: 2px solid white; 
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
