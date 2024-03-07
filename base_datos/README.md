@@ -13,11 +13,15 @@ Jugador
 
 | Campo         | Tipo           | Descripcion   | 
 |---------------|----------------|---------------|
-| ID_Jugador    | INT            | Identificador del jugador |                     
+| Curb          | INT            | Identificador del jugador |
+| ID_Jugador    | INT            | Identificador del jugador |
+| Apodo         | VARCHAR (20)   | Apodo del jugador |
 | Nombre        | VARCHAR(20)    | Nombre del jugador |                     
-| Apellido      | VARCHAR(20)    | Apellido del jugador |                     
-| Edad          | INT            | Edad del jugador |                     
-| Posicion      | VARCHAR(30)    | Posición del jugador en el equipo |                     
+| Apellido      | VARCHAR(20)    | Apellido del jugador |  
+| Nº de playera | INT            | Identificador del jugador |
+| Correo        | VARCHAR(30)    | Correo del jugador |
+| Fecha de nacimiento         | INT            | Edad del jugador |                     
+| Numero      | VARCHAR(30)    | Numero de telefono |                     
 
 
 
