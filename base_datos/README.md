@@ -16,7 +16,7 @@ Jugador
 | ID_Jugador    | INT            | Identificador del jugador |                     
 | Nombre        | VARCHAR(20)    | Nombre del jugador |                     
 | Apellido      | VARCHAR(20)    | Apellido del jugador |                     
-| Edad          | INT            | Edad del jugador |                     
+|Fecha de nacimiento        | INT            | Fecha de nacimiento del jugador |                     
 | Posicion      | VARCHAR(30)    | Posición del jugador en el equipo |                     
 
 
