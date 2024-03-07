@@ -39,18 +39,6 @@ Entrenador
 | Especialidad  | VARCHAR(30)    | Especialidad del entrenador |
 
 
-Partido 
-
-| Campo         | Tipo           | Descripcion   |
-|---------------|----------------|---------------|
-| ID_Partido    | INT            | Identificador del partido |                     
-| Fecha         | DATE           | Fecha en que se juega el partido |                     
-| Hora          | TIME           | Hora en que se juega el partido |                     
-| ID_Equipo_Local     | INT     | Identificador del equipo local |                     
-| ID_Equipo_Visitante | INT     | Identificador del equipo visitante |                     
-
-
-
 Campo
 
 | Campo         | Tipo           | Descripcion   | 
@@ -81,13 +69,6 @@ Participa
 | ID_Jugador    | INT            | Identificador del jugador |                     
 
 
-
-Dirige
-
-| Campo         | Tipo           | Descripcion   | 
-|---------------|----------------|---------------|
-| ID_Entrenador | INT            | Identificador del entrenador |                     
-| ID_Equipo     | INT            | Identificador del equipo |                     
 
 Arbitraje
 
