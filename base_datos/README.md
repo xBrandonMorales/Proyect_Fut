@@ -2,21 +2,29 @@
 Equipo
 
 |Campo          | Tipo           |Descripcion    |
-|---------------|----------------|---------------|                   
+|---------------|----------------|---------------|          
+|  Liga      | INT            |  Liga del Equipo |
 | ID_Equipo     | INT            | Identificador del equipo |                     
 | Nombre        | VARCHAR(25)    | Nombre del equipo |                    
-| Ciudad        | VARCHAR(25)    | Ciudad del equipo |                     
-| Año_Fundacion | INT            | Año de fundación del equipo |      
+| Capitan       | VARCHAR(25)    | Capitan del equipo |                     
+| Correo del Capitan | VARCHAR(30)           | Correo del Capitan | 
+| Entrenador      | VARCHAR(25)    | Nombre del entrenador | 
+| Numero de telefono     | VARCHAR(25)    | Numero del entrenador | 
 
 
 Jugador
 
 | Campo         | Tipo           | Descripcion   | 
 |---------------|----------------|---------------|
-| ID_Jugador    | INT            | Identificador del jugador |                     
+| Curb          | INT            | Identificador del jugador |
+| ID_Jugador    | INT            | Identificador del jugador | 
+| Apodo         | VARCHAR(20)    | Apodo del jugador |
 | Nombre        | VARCHAR(20)    | Nombre del jugador |                     
-| Apellido      | VARCHAR(20)    | Apellido del jugador |                     
-|Fecha de nacimiento        | INT            | Fecha de nacimiento del jugador |                     
+| Apellido      | VARCHAR(20)    | Apellido del jugador | 
+| Numero de playera        | INT            | Identificador del jugador |
+| Correo      | VARCHAR(20)    | Correo del jugador |
+|Fecha de nacimiento        | INT            | Fecha de nacimiento del jugador |
+| Numero de telefono      | VARCHAR(20)    | Telefono del jugador |
 | Posicion      | VARCHAR(30)    | Posición del jugador en el equipo |                     
 
 
