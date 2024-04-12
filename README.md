@@ -41,7 +41,9 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 
 
 ## 4.4 Aspectos en los que se centraran cada uno
-|Usuario  |Que hara   |Acabado |
+| Usuario         | Que hara          | Como van   | 
+|---------------|----------------|---------------|
+| Brandon       | Ayudara en diseño |              |
 
 
 
