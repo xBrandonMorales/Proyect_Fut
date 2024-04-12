@@ -41,9 +41,12 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 
 
 ## 4.4 Aspectos en los que se centraran cada uno
-| Usuario         | Que hara          | Como van   | 
+| Usuario         | Cosas a desarrollar | Como van   | 
 |---------------|----------------|---------------|
-| Brandon       | Ayudara en diseño |              |
+| Brandon       | Ayudara en diseño | Ya acabando |
+| Axel       | Diseño y programacion de las estadisticas | En proceso |
+|Jesus      | Horarios de los jugadores automatizados | En proceso|
+
 
 
 
