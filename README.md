@@ -56,7 +56,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 
 ## 4.5 Aspectos en los que se centraran cada uno en la aplicacion movil
 | Usuario         | Cosas a desarrollar | Como van   | 
-|--------------**-|----------------|---------------|
+|-----------------|----------------|---------------|
 | Axel y Brandon  | Diseño de la App | Concluido |
 | Jesus           | Desarrolo de la interfaz de inicio | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
