@@ -40,6 +40,10 @@ Funcionalidades clave de la aplicación:
 La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para los jugadores y entrenadores como para los administradores. Además, se buscará garantizar la seguridad de la información y la privacidad de los usuarios mediante el uso de técnicas de encriptación y autenticación.
 
 
+## 4.4 Aspectos en los que se centraran cada uno
+|Usuario  |Que hara   |Acabado |
+
+
 
 
 
