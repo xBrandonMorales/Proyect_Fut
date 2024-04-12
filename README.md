@@ -58,6 +58,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Usuario         | Cosas a desarrollar | Como van   | 
 |-----------------|----------------|---------------|
 | Axel y Brandon  | Diseño de la App | Concluido |
+| Axel y Brandon  | Conexion exitosa a base de datos | En Proceso |
 | Jesus           | Desarrolo de la interfaz de inicio | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos | En Proceso |
@@ -68,6 +69,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 ## 4.6 Aspectos en los que se centraran cada uno en la parte de IOT
 | Usuario                | Cosas a desarrollar | Como van   | 
 |------------------------|----------------|---------------|
+| Axel y Brandon         | Conexion exitosa a base de datos | En Proceso |
 | Axel, Brandon          | Identificacion de la integracion con el proyecto | Concluido |
 | Axel, Brandon, Jesus   | Identificar los componentes a utilizar | Concluido |
 | Axel y Brandon         | Adquisicion de los componentes | En proceso |
