@@ -43,40 +43,40 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 ## 4.4 Aspectos en los que se centraran cada uno en la aplicacion web
 | Usuario         | Cosas a desarrollar | Como van   | 
 |---------------|----------------|---------------|
-| Brandon       | Ayudara en desarrollo de diseño en general de interfaces | Concluido |
-| Axel          | Conexion exitosa a base de datos | Concluido |
-| Axel y Brandon| Programacion de las Estadisticas de cada Jugador | Concluido |
-| Axel y Brandon| Busqueda de Filtrado por nombre y categoria de Jugadores |  Concluido  |
-| Axel y Brandon| Programacion de las Estadisticas de cada Equipo | Concluido |
-| Axel          | Muestra de Equipos insertados desde la base de Datos | Concluido |
-| Axel          | Horarios de los jugadores automatizados | En proceso |
-| Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados | En proceso |
-| Axel          | Comprobacion de resultados | En espera |
+| Brandon       | Ayudara en desarrollo de diseño en general de interfaces     | Concluido |
+| Axel          | Conexion exitosa a base de datos | Concluido     |
+| Axel y Brandon| Programacion de las Estadisticas de cada Jugador     | Concluido |
+| Axel y Brandon| Busqueda de Filtrado por nombre y categoria de Jugadores      |  Concluido  |
+| Axel y Brandon| Programacion de las Estadisticas de cada Equipo     | Concluido |
+| Axel          | Muestra de Equipos insertados desde la base de Datos     | Concluido |
+| Axel          | Horarios de los jugadores automatizados     | En proceso |
+| Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados     | En proceso |
+| Axel          | Comprobacion de resultados      | En espera |
 
 
 ## 4.5 Aspectos en los que se centraran cada uno en la aplicacion movil
 | Usuario         | Cosas a desarrollar | Como van   | 
 |-----------------|----------------|---------------|
-| Axel y Brandon  | Diseño de la App | Concluido |
-| Jesus           | Conexion exitosa a base de datos | En Proceso |
-| Jesus           | Desarrolo de la interfaz de inicio | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Horarios | En Proceso |
-| Jesus           | Comprobacion de resultados | En espera |
+| Axel y Brandon  | Diseño de la App     | Concluido |
+| Jesus           | Conexion exitosa a base de datos     | En Proceso |
+| Jesus           | Desarrolo de la interfaz de inicio     | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores     | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos     | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Horarios     | En Proceso |
+| Jesus           | Comprobacion de resultados     | En espera |
 
 
 ## 4.6 Aspectos en los que se centraran cada uno en la parte de IOT
 | Usuario                | Cosas a desarrollar | Como van   | 
 |------------------------|----------------|---------------|
-| Axel y Brandon         | Conexion exitosa a base de datos | En Proceso |
-| Axel, Brandon          | Identificacion de la integracion con el proyecto | Concluido |
-| Axel, Brandon, Jesus   | Identificar los componentes a utilizar | Concluido |
-| Axel y Brandon         | Adquisicion de los componentes | En proceso |
-| Brandon                | Armado de los componentes | En espera |
-| Axel                   | Desarrollo de las interfaces | En espera |
-| Axel y Brandon         | Desarrollo de la integracion a la app movil | En espera |
-| Brandon                | Comprobacion de resultados | En espera |
+| Axel y Brandon         | Conexion exitosa a base de datos     | En Proceso |
+| Axel, Brandon          | Identificacion de la integracion con el proyecto     | Concluido |
+| Axel, Brandon, Jesus   | Identificar los componentes a utilizar     | Concluido |
+| Axel y Brandon         | Adquisicion de los componentes     | En proceso |
+| Brandon                | Armado de los componentes     | En espera |
+| Axel                   | Desarrollo de las interfaces     | En espera |
+| Axel y Brandon         | Desarrollo de la integracion a la app movil     | En espera |
+| Brandon                | Comprobacion de resultados     | En espera |
 
 
 
