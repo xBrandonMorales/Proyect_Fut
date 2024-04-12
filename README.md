@@ -43,7 +43,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 ## 4.4 Aspectos en los que se centraran cada uno en la aplicacion web
 | Usuario         | Cosas a desarrollar | Como van   | 
 |---------------|----------------|---------------|
-| Brandon       | Ayudara en desarrollo de diseño en general de interfaces | En proceso |
+| Brandon       | Ayudara en desarrollo de diseño en general de interfaces | Concluido |
 | Axel          | Conexion exitosa a base de datos | Concluido |
 | Axel y Brandon| Programacion de las Estadisticas de cada Jugador | Concluido |
 | Axel y Brandon| Busqueda de Filtrado por nombre y categoria de Jugadores |  Concluido  |
