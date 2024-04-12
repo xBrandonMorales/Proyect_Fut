@@ -63,7 +63,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Horarios | En Proceso |
-| Axel y Brandon, Jesus | Comprobacion de resultados | En espera |
+| Jesus           | Comprobacion de resultados | En espera |
 
 
 ## 4.6 Aspectos en los que se centraran cada uno en la parte de IOT
@@ -73,10 +73,10 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Axel, Brandon          | Identificacion de la integracion con el proyecto | Concluido |
 | Axel, Brandon, Jesus   | Identificar los componentes a utilizar | Concluido |
 | Axel y Brandon         | Adquisicion de los componentes | En proceso |
-| Axel y Brandon         | Armado de los componentes | En espera |
+| Brandon                | Armado de los componentes | En espera |
 | Axel                   | Desarrollo de las interfaces | En espera |
 | Axel y Brandon         | Desarrollo de la integracion a la app movil | En espera |
-| Axel                   | Comprobacion de resultados | En espera |
+| Brandon                | Comprobacion de resultados | En espera |
 
 
 
