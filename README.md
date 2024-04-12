@@ -40,12 +40,41 @@ Funcionalidades clave de la aplicación:
 La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para los jugadores y entrenadores como para los administradores. Además, se buscará garantizar la seguridad de la información y la privacidad de los usuarios mediante el uso de técnicas de encriptación y autenticación.
 
 
-## 4.4 Aspectos en los que se centraran cada uno
+## 4.4 Aspectos en los que se centraran cada uno en la aplicacion web
 | Usuario         | Cosas a desarrollar | Como van   | 
 |---------------|----------------|---------------|
-| Brandon       | Ayudara en diseño | Ya acabando |
-| Axel       | Diseño y programacion de las estadisticas | En proceso |
-|Jesus      | Horarios de los jugadores automatizados | En proceso|
+| Brandon       | Ayudara en desarrollo de diseño en general de interfaces | En proceso |
+| Axel          | Conexion exitosa a base de datos | Concluido |
+| Axel y Brandon| Programacion de las Estadisticas de cada Jugador | Concluido |
+| Axel y Brandon| Busqueda de Filtrado por nombre y categoria de Jugadores |  Concluido  |
+| Axel y Brandon| Programacion de las Estadisticas de cada Equipo | Concluido |
+| Axel          | Muestra de Equipos insertados desde la base de Datos | Concluido |
+| Axel          | Horarios de los jugadores automatizados | En proceso |
+| Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados | En proceso |
+| Axel          | Comprobacion de resultados | En espera |
+
+
+## 4.5 Aspectos en los que se centraran cada uno en la aplicacion movil
+| Usuario         | Cosas a desarrollar | Como van   | 
+|--------------**-|----------------|---------------|
+| Axel y Brandon  | Diseño de la App | Concluido |
+| Jesus           | Desarrolo de la interfaz de inicio | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos | En Proceso |
+| Jesus           | Desarrolo de la interfaz de Horarios | En Proceso |
+| Axel y Brandon, Jesus | Comprobacion de resultados | En espera |
+
+
+## 4.6 Aspectos en los que se centraran cada uno en la parte de IOT
+| Usuario                | Cosas a desarrollar | Como van   | 
+|------------------------|----------------|---------------|
+| Axel, Brandon          | Identificacion de la integracion con el proyecto | Concluido |
+| Axel, Brandon, Jesus   | Identificar los componentes a utilizar | Concluido |
+| Axel y Brandon         | Adquisicion de los componentes | En proceso |
+| Axel                   | Armado de los componentes | En espera |
+| Axel                   | Desarrollo de las interfaces | En espera |
+| Axel                   | Desarrollo de la integracion a la app movil | En espera |
+| Axel                   | Comprobacion de resultados | En espera |
 
 
 
