@@ -71,9 +71,9 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Axel, Brandon          | Identificacion de la integracion con el proyecto | Concluido |
 | Axel, Brandon, Jesus   | Identificar los componentes a utilizar | Concluido |
 | Axel y Brandon         | Adquisicion de los componentes | En proceso |
-| Axel                   | Armado de los componentes | En espera |
+| Axel y Brandon         | Armado de los componentes | En espera |
 | Axel                   | Desarrollo de las interfaces | En espera |
-| Axel                   | Desarrollo de la integracion a la app movil | En espera |
+| Axel y Brandon         | Desarrollo de la integracion a la app movil | En espera |
 | Axel                   | Comprobacion de resultados | En espera |
 
 
