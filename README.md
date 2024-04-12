@@ -58,7 +58,7 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Usuario         | Cosas a desarrollar | Como van   | 
 |-----------------|----------------|---------------|
 | Axel y Brandon  | Diseño de la App | Concluido |
-| Axel y Brandon  | Conexion exitosa a base de datos | En Proceso |
+| Jesus           | Conexion exitosa a base de datos | En Proceso |
 | Jesus           | Desarrolo de la interfaz de inicio | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos | En Proceso |
