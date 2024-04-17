@@ -51,17 +51,17 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Axel          | Muestra de Equipos insertados desde la base de Datos     | Concluido |
 | Axel          | Horarios de los jugadores automatizados     | En proceso |
 | Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados     | En proceso |
-| Axel          | Comprobacion de resultados      | En espera |
+| Axel y Brandon         | Comprobacion de resultados      | En espera |
 
 
 ## 4.5 Aspectos en los que se centraran cada uno en la aplicacion movil
 | Usuario         | Cosas a desarrollar | Como van   | 
 |-----------------|----------------|---------------|
 | Axel y Brandon  | Diseño de la App     | Concluido |
-| Jesus           | Conexion exitosa a base de datos     | En Proceso |
-| Jesus           | Desarrolo de la interfaz de inicio     | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Estadisticas de Jugadores     | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Estadisticas de Equipos     | En Proceso |
+| Brandon          | Conexion exitosa a base de datos     | En Proceso |
+| Brandon           | Desarrolo de la interfaz de inicio     | En Proceso |
+| Brandon          | Desarrolo de la interfaz de Estadisticas de Jugadores     | En Proceso |
+| Brandon           | Desarrolo de la interfaz de Estadisticas de Equipos     | En Proceso |
 | Jesus           | Desarrolo de la interfaz de Horarios     | En Proceso |
 | Jesus           | Comprobacion de resultados     | En espera |
 
