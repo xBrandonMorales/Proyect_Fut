@@ -49,34 +49,34 @@ La aplicación estará diseñada para ser fácil de usar e intuitiva, tanto para
 | Axel y Brandon| Busqueda de Filtrado por nombre y categoria de Jugadores      |  Concluido  |
 | Axel y Brandon| Programacion de las Estadisticas de cada Equipo     | Concluido |
 | Axel          | Muestra de Equipos insertados desde la base de Datos     | Concluido |
-| Axel          | Horarios de los jugadores automatizados     | En proceso |
-| Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados     | En proceso |
-| Axel y Brandon         | Comprobacion de resultados      | En espera |
+| Axel          | Horarios de los jugadores automatizados     |Concluido |
+| Axel          | Desarrollo de la interfaz de Horarios de juegos ya publicados     | Concluido |
+| Axel y Brandon         | Comprobacion de resultados      | Concluido|
 
 
 ## 4.5 Aspectos en los que se centraran cada uno en la aplicacion movil
 | Usuario         | Cosas a desarrollar | Como van   | 
 |-----------------|----------------|---------------|
 | Axel y Brandon  | Diseño de la App     | Concluido |
-| Brandon          | Conexion exitosa a base de datos     | En Proceso |
-| Brandon           | Desarrolo de la interfaz de inicio     | En Proceso |
-| Brandon          | Desarrolo de la interfaz de Estadisticas de Jugadores     | En Proceso |
-| Brandon           | Desarrolo de la interfaz de Estadisticas de Equipos     | En Proceso |
-| Jesus           | Desarrolo de la interfaz de Horarios     | En Proceso |
-| Jesus           | Comprobacion de resultados     | En espera |
+| Brandon          | Conexion exitosa a base de datos     | Concluido |
+| Brandon           | Desarrolo de la interfaz de inicio     | Concluido |
+| Brandon          | Desarrolo de la interfaz de Estadisticas de Jugadores     | Concluido |
+| Brandon           | Desarrolo de la interfaz de Estadisticas de Equipos     | Concluido |
+| Jesus           | Desarrolo de la interfaz de Horarios     | Concluido |
+| Jesus           | Comprobacion de resultados     | Concluido |
 
 
 ## 4.6 Aspectos en los que se centraran cada uno en la parte de IOT
 | Usuario                | Cosas a desarrollar | Como van   | 
 |------------------------|----------------|---------------|
-| Axel y Brandon         | Conexion exitosa a base de datos     | En Proceso |
+| Axel y Brandon         | Conexion exitosa a base de datos     | Concluido |
 | Axel, Brandon          | Identificacion de la integracion con el proyecto     | Concluido |
 | Axel, Brandon, Jesus   | Identificar los componentes a utilizar     | Concluido |
-| Axel y Brandon         | Adquisicion de los componentes     | En proceso |
-| Brandon                | Armado de los componentes     | En espera |
-| Axel                   | Desarrollo de las interfaces     | En espera |
-| Axel y Brandon         | Desarrollo de la integracion a la app movil     | En espera |
-| Brandon                | Comprobacion de resultados     | En espera |
+| Axel y Brandon         | Adquisicion de los componentes     | Concluido|
+| Brandon                | Armado de los componentes     | Concluido|
+| Axel                   | Desarrollo de las interfaces     | Concluido|
+| Axel y Brandon         | Desarrollo de la integracion a la app movil     | Cobcluido |
+| Brandon                | Comprobacion de resultados     | Concluido|
 
 
 
